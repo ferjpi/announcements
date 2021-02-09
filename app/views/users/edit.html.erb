@@ -1,0 +1,15 @@
+<div class="container">
+  <p>Llena o modifica los campos para actualizar tu perfil: </p>
+  <%= form_with  model: @user, method: :put do |form| %>
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name %>
+
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name %>
+
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+
+    <%= form.submit "Actualizar" %>
+  <% end %>
+</div>

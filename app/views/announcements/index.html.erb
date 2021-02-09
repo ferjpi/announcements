@@ -1,0 +1,18 @@
+
+<h1 class="text-center text-blod text-white text-3xl">Announcements</h1>
+
+<section class="items-center justify-center mx-auto">
+  <% @announcements.each do |announcement|%>
+    <div class="bg-white rounded-lg my-5 w-3/5 mx-auto">
+      <div class="p-5">
+        <p><%= announcement.content %></p>
+      </div>
+      <div class="bg-gray-400 rounded-b-lg flex items-center justify-between">
+        <p class="p-2 text-gray-800 text-base"><%= announcement.user.first_name %> <%= announcement.user.last_name %></p>
+        <em class="p-2 text-gray-600 text-xs"><%= announcement.expire %></em>
+      </div>
+    </div>
+  <% end %>
+
+</section>
+

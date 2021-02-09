@@ -1,0 +1,13 @@
+<section class="mx-auto">
+  <%= form_with  model: @announcement, method: :post do |form| %>
+    <%= form.label :content %>
+    <%= form.text_field :content %>
+
+    <%= form.label :expire %>
+    <%= form.date_field :expire %>
+
+    <%= form.hidden_field :seen %>
+
+    <%= form.submit "Create announcement" %>
+  <% end %>
+</section>

@@ -1,0 +1,12 @@
+<div class="container">
+  <h2>Profile</h2>
+  <% unless @user.first_name %>
+    <p>No tienes tu nombre registrado por favor llena este campo</p>
+  <% else %>
+    <p>Name: <span><%= @user.first_name %> <%= @user.last_name %></span> </p>
+
+  <% end  %>
+  <p>Email: <span><%= @user.email %> </span> </p>
+
+  <%= link_to 'Editar perfil', edit_user_path(@user) %>
+</div>
